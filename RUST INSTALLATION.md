@@ -35,3 +35,11 @@ ls
 #Hello, world!
 
 ```
+
+
+## ERROR INFROAMTION
+```
+# ERROR INFO
+rustup-init.sh: line 465:  6244 Illegal instruction     "$@"
+
+```
