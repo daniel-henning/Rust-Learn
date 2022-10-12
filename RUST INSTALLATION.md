@@ -15,4 +15,16 @@ export PATH=~/.cargo/bin:$PATH
 rustc --version
 #rustc 1.31.1 (b6c32da9b 2018-12-18)
 
+
+# Verfication
+mkdir ~/projects
+cd ~/projects
+mkdir hello_world
+cd hello_world # cat main.rs    fn main() {   println!("Hello, world!"); }
+# rustc main.rs 
+# ls
+main  main.rs
+# ./main 
+Hello, world!
+
 ```
