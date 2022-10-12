@@ -4,7 +4,8 @@ curl https://sh.rustup.rs -sSf | sh
 
 # Installation configuration for root user 
 
-vim /etc/profile
+vim ~/.bashrc
+
 export PATH=$PATH:/root/.cargo/bin`
 
 # Installation configuration for non-root user 
