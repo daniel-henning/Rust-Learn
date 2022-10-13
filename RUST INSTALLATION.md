@@ -47,7 +47,7 @@ rustup-init.sh: line 465:  6244 Illegal instruction     "$@"
 
 
 
-# install RUST on centOS.6 without root user.
+# Install RUST on centOS.6 without root user.
 
 [https://pkgs.org/]
 #### update curl.
@@ -75,3 +75,11 @@ rustup-init.sh: line 465:  6244 Illegal instruction     "$@"
 
 [libLLVM-7.so](http://mirror.centos.org/centos/7/sclo/x86_64/rh/Packages/l/llvm-toolset-7.0-llvm-libs-7.0.1-4.el7.x86_64.rpm)   
 
+
+### ADD SHARE LIB TO ENVIRONMENT
+```
+sLIB='$HOME/centos/opt/rh'
+L='/lib:/lib64:/usr/lib:/usr/lib64'
+
+export LD_LIBRARY_PATH="$sLIB/rust-toolset-1.41/root/usr/lib:$sLIB/rust-toolset-1.41/root/usr/lib64:$sLIB//llvm-toolset-7.0/root/usr/lib64:$L"
+```
