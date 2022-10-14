@@ -1,10 +1,11 @@
 
-### CentOS /usr/local/lib system wide $LD_LIBRARY_PATH?
-
-You can add it in /etc/bashrc, say, at the end.
+### Set the environmental variable LD_LIBRARY_PATH in Linux
+Keep the previous path, don't overwrite it:
 ```bash
-export PATH=$PATH:/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/
 ```
-
+You can add it to your ~/.bashrc:
+```bash
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/' >> ~/.bashrc
+```
 ```ldconfig``` - configure dynamic linker run-time bindings
