@@ -95,8 +95,10 @@ export LD_LIBRARY_PATH="$sLIB/rust-toolset-1.41/root/usr/lib:$sLIB/rust-toolset-
 
 https://forge.rust-lang.org/other-installation-methods.html#standalone
 
-二，解压安装包
+### 二，解压安装包
+```tar zxvf rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz```
 
-三，运行```install.sh```脚本
+### 三，运行```install.sh```脚本
 
-四，检测
+### 四，验证
+``` rustc --version ```
