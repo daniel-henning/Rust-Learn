@@ -83,3 +83,20 @@ L='/lib:/lib64:/usr/lib:/usr/lib64'
 
 export LD_LIBRARY_PATH="$sLIB/rust-toolset-1.41/root/usr/lib:$sLIB/rust-toolset-1.41/root/usr/lib64:$sLIB//llvm-toolset-7.0/root/usr/lib64:$L"
 ```
+
+
+
+
+# CentOS离线安装Rust
+
+条件所限，无法在线连接外网，或是下载慢，容易中断时，可以采用。
+
+一，下载离线安装包
+
+https://forge.rust-lang.org/other-installation-methods.html#standalone
+
+二，解压安装包
+
+三，运行```install.sh```脚本
+
+四，检测
