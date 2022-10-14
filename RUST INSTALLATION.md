@@ -99,6 +99,7 @@ https://forge.rust-lang.org/other-installation-methods.html#standalone
 ```tar zxvf rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz```
 
 #### 三，运行```install.sh```脚本
+```./install.sh --prefix=/$target_path```
 
 #### 四，验证
 ``` rustc --version ```
