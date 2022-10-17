@@ -1,4 +1,6 @@
 
+## Linux/Centos下/lib64/libc.so.6: version 'GLIBC_2.14'not found问题
+
 ### 查看现有版本和动态库依赖
 查看glibc版本
 ```bash
@@ -30,10 +32,13 @@ cd build
 make -j4 & make install
 ```
 
-最后将 LD_LIBRARY_PATH 添加到配置文件
+最后将 LD_LIBRARY_PATH 添加到配置文件，此时容易出现Segmentation fault问题
 ```bash
 export LD_LIBRARY_PATH=/your/path/lib:$LD_LIBRARY_PATH
 ```
+glibc安装涉及到系统核心，很容易出错；    
+Segmentation fault的报错一般与动态库链接不匹配有关；    
+patchelf可以一定程度解决glibc更新过程中动态库链接不匹配的问题，前提是你缺的只剩这一个库了。    
 
 非root用户添加LD_LIBRARY_PATH之后会出现系统崩溃，一个有用的解决方案是使用```patchelf```在代码编译后直接修改elf格式的可执行文件，通过设置```-set-rpath```修改library搜索路径，使用```–set-interpreter```修改```dynamic linker```。
 首先需要下载```patchelf```，然后使用示例如下（myapp是我的二进制可执行文件）：
